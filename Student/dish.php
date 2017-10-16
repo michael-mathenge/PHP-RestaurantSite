@@ -16,7 +16,7 @@ if (isset($_GET['item'])){
 //Calculate a suggested tip
 function suggestedTip($price, $tip) {
     $totalTip = $price * $tip;
-    echo number_format($totalTip, 2);
+    echo money_format('%.2n', $totalTip);
 }
 
 ?>
@@ -25,11 +25,11 @@ function suggestedTip($price, $tip) {
 
 <div id="dish">
     <h1><?php echo $dish["title"]; ?><span class="price"> <sup>$</sup><?php echo $dish["price"]; ?></span></h1>
-    <p><?php echo $dish["blurb"] ?></p>
+    <p><?php echo $dish["blurb"]; ?></p>
 
     <br>
 
-    <p><strong>Suggested beverage: <?php echo $dish["drink"] ?> </strong></p>
+    <p><strong>Suggested beverage: <?php echo $dish["drink"]; ?> </strong></p>
     <p><em>Suggested tip: <sup>$</sup><?php suggestedTip($dish["price"], 0.20); ?></em></p>
 </div><!-- dish -->
 

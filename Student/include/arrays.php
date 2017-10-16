@@ -4,19 +4,19 @@
 
 $navItems = array(
     array(
-        "slug" => "index.php",
+        "slug"  => "index.php",
         "title" => "Home"
     ),
     array(
-        "slug" => "team.php",
+        "slug"  => "team.php",
         "title" => "Team"
     ),
     array(
-        "slug" => "menu.php",
+        "slug"  => "menu.php",
         "title" => "Menu"
     ),
     array(
-        "slug" => "contact.php",
+        "slug"  => "contact.php",
         "title" => "Contact"
     ),
 );

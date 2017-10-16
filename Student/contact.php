@@ -63,9 +63,9 @@ include('include/header.php');
 
     if (isset($_POST['contact_submit'])){
 
-        $name       = trim($_POST['name']);
-        $email      = trim($_POST['email']);
-        $msg        = $_POST['message'];
+        $name   = trim($_POST['name']);
+        $email  = trim($_POST['email']);
+        $msg    = $_POST['message'];
 
         //Check to see if name or email have header injections
         if (has_header_injection($name) || has_header_injection($email)){
@@ -81,15 +81,15 @@ include('include/header.php');
         $to = "mmathenge1@gmail.com";
 
         //Create a subject
-        $subject = "$name sent you a message via your contact form";
+        $subject = "$name sent you a message via your restaurant contact form";
 
         //Construct the actual message
-        $message = "Name: $name\r\n";
+        $message  = "Name: $name\r\n";
         $message .= "Email: $email\r\n";
-        $message .= "Message:\r\n$msg";
+        $message .= "Message:\r\n$msg"; //like this <- because we want the actual message on a different line
 
         //if the subscribe checkbox was checked...
-        if (isset($_POST['subscribe']) && $_POST['subscribe'] == 'Subscribe'){
+        if (isset($_POST['subscribe']) && $_POST['subscribe'] == 'Subscribe'){ //the seond part means "AND THE VALUE OF 'IT' WAS SUBSCRIBE"
 
             //Add a new line to the message variable
             $message .= "\r\n\r\nPlease add $email to the mailing list.\r\n";
